@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name TOP_LEVEL_ENTITY olive_std_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:29:37  SEPTEMBER 08, 2014"
-set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
+set_global_assignment -name LAST_QUARTUS_VERSION "16.1.2 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -177,15 +177,17 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to D[*]
 # Project files Assignments
 # ==========================
 
-set_global_assignment -name QSYS_FILE olive_std_core.qsys
-set_global_assignment -name VERILOG_FILE ip/peridot_pfc/peridot_pfc_ioe.v
-set_global_assignment -name VERILOG_FILE ip/peridot_pfc/peridot_pfc.v
-set_global_assignment -name VERILOG_FILE olive_std_top.v
-set_global_assignment -name SDC_FILE peridot.sdc
-set_global_assignment -name QIP_FILE syspll.qip
 
 
 # Compile Settings Assignments
 # ==========================
 
+set_global_assignment -name QSYS_FILE olive_std_core.qsys
+set_global_assignment -name VERILOG_FILE ip/peridot_gen1_peripherals/ip/peridot_pfc/peridot_pfc_ioe.v
+set_global_assignment -name VERILOG_FILE ip/peridot_gen1_peripherals/ip/peridot_pfc/peridot_pfc.v
+set_global_assignment -name VERILOG_FILE olive_std_top.v
+set_global_assignment -name SDC_FILE peridot.sdc
+set_global_assignment -name QIP_FILE syspll.qip
+
+set_global_assignment -name SMART_RECOMPILE ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
