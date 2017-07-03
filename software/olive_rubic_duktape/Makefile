@@ -144,8 +144,8 @@ ELF := olive_rubic_duktape.elf
 # Paths to C, C++, and assembly source files.
 C_SRCS += main.c
 C_SRCS += resources.c
-C_SRCS += duktape-2.0.2/duktape.c
-C_SRCS += ../../../duktape-extension/src/dux_all.c
+C_SRCS += duktape-2.1.0/duktape.c
+C_SRCS += duktape-extension/dux.c
 CXX_SRCS :=
 ASM_SRCS :=
 
@@ -163,9 +163,9 @@ CREATE_ELF_DERIVED_FILES := 0
 CREATE_LINKER_MAP := 1
 
 # Common arguments for ALT_CFLAGSs
-APP_CFLAGS_DEFINED_SYMBOLS := -DDUK_F_32BIT_PTRS -DDUK_USE_FASTINT -DDUX_USE_BOARD_PERIDOT
+APP_CFLAGS_DEFINED_SYMBOLS :=
 APP_CFLAGS_UNDEFINED_SYMBOLS :=
-APP_CFLAGS_OPTIMIZATION := -O0
+APP_CFLAGS_OPTIMIZATION := -O2
 APP_CFLAGS_DEBUG_LEVEL := -g
 APP_CFLAGS_WARNINGS := -Wall
 APP_CFLAGS_USER_FLAGS :=
@@ -183,7 +183,7 @@ SYS_LIB :=
 BSP_ROOT_DIR := ../olive_rubic_bsp/
 
 # List of application specific include directories, library directories and library names
-APP_INCLUDE_DIRS += duktape-2.0.2
+APP_INCLUDE_DIRS += duktape-2.1.0
 APP_INCLUDE_DIRS += duktape-extension
 APP_LIBRARY_DIRS :=
 APP_LIBRARY_NAMES :=
@@ -192,7 +192,6 @@ APP_LIBRARY_NAMES :=
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
-QUARTUS_PROJECT_DIR := ../../
 
 
 #END GENERATED
@@ -1084,4 +1083,3 @@ print-elf-name:
 	@$(ECHO) $(ELF)
 
 include $(BSP_ROOT_DIR)/flash_boot_gen.mk
-

@@ -1,0 +1,8 @@
+/.metadata
+/RemoteSystemTempFiles
+obj
+mem_init
+*.objdump
+*.map
+*.elf
+lib*_bsp.a

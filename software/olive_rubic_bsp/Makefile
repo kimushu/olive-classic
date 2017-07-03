@@ -138,7 +138,7 @@ BSP_CFLAGS_DEBUG = -g
 # compiler optimization can remove variables and produce non-sequential 
 # execution of code while debugging. This setting defines the value of 
 # BSP_CFLAGS_OPTIMIZATION in Makefile. 
-BSP_CFLAGS_OPTIMIZATION = -O0
+BSP_CFLAGS_OPTIMIZATION = -O2
 
 # C/C++ compiler warning level. "-Wall" is commonly used.This setting defines 
 # the value of BSP_CFLAGS_WARNINGS in Makefile. 
@@ -386,7 +386,8 @@ peridot_swi_driver_SRCS_ROOT := drivers
 
 # peridot_swi_driver sources 
 peridot_swi_driver_C_LIB_SRCS := \
-	$(peridot_swi_driver_SRCS_ROOT)/src/peridot_swi.c
+	$(peridot_swi_driver_SRCS_ROOT)/src/peridot_swi.c \
+	$(peridot_swi_driver_SRCS_ROOT)/src/peridot_swi_flash.c
 
 peridot_swi_driver_ASM_LIB_SRCS := \
 	$(peridot_swi_driver_SRCS_ROOT)/src/peridot_swi_flash_boot.S

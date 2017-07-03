@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>tinyth</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2017/04/06 16:54:59</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1491465299156</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>/home/shuta/projects/olive-classic/software/olive_rubic_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2017/07/04 0:17:39</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1499095059086</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>D:\Works\Altera\olive-classic\software\olive_rubic_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>../../olive_std_core.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>..\..\olive_std_core.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_fast</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -386,7 +386,7 @@
                 <SettingName>hal.make.bsp_cflags_optimization</SettingName>
                 <Identifier>BSP_CFLAGS_OPTIMIZATION</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>-O0</Value>
+                <Value>-O2</Value>
                 <DefaultValue>-O0</DefaultValue>
                 <DestinationFile>makefile_variable</DestinationFile>
                 <Description>C/C++ compiler optimization level. "-O0" = no optimization,"-O2" = "normal" optimization, etc. "-O0" is recommended for code that you want to debug since compiler optimization can remove variables and produce non-sequential execution of code while debugging. This setting defines the value of BSP_CFLAGS_OPTIMIZATION in Makefile.</Description>
@@ -734,7 +734,7 @@
                 <SettingName>hal.enable_small_c_library</SettingName>
                 <Identifier>none</Identifier>
                 <Type>Boolean</Type>
-                <Value>0</Value>
+                <Value>1</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Causes the small newlib (C library) to be used. This reduces code and data footprint at the expense of reduced functionality. Several newlib features are removed such as floating-point support in printf(), stdin input routines, and buffered I/O. The small C library is not compatible with Micrium MicroC/OS-II. If true, adds -msmallc to ALT_LDFLAGS in public.mk.</Description>
@@ -1058,7 +1058,7 @@
                 <SettingName>rubic_agent.rubic.version</SettingName>
                 <Identifier>RUBIC_AGENT_RUBIC_VERSION</Identifier>
                 <Type>QuotedString</Type>
-                <Value>>=0.99.1</Value>
+                <Value>>=1.0.0</Value>
                 <DefaultValue>>=0.99.1</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Supported Rubic version (semver range syntax)</Description>

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_fast' in SOPC Builder design 'olive_std_core'
  * SOPC Builder design path: ../../olive_std_core.sopcinfo
  *
- * Generated: Thu Apr 06 16:50:41 JST 2017
+ * Generated: Tue Jul 04 00:17:42 JST 2017
  */
 
 /*
@@ -337,7 +337,7 @@
  */
 
 #define RUBIC_AGENT_ROOT_NAME "/sys/rubic"
-#define RUBIC_AGENT_RUBIC_VERSION ">=0.99.1"
+#define RUBIC_AGENT_RUBIC_VERSION ">=1.0.0"
 #define RUBIC_AGENT_RUNTIME1_NAME ""
 #define RUBIC_AGENT_RUNTIME1_VERSION "0.0.1"
 #define RUBIC_AGENT_RUNTIME2_NAME ""
@@ -429,7 +429,7 @@
 #define SWI_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define SWI_NAME "/dev/swi"
 #define SWI_SPAN 32
-#define SWI_TIMESTAMP 1491464349
+#define SWI_TIMESTAMP 1499094838
 #define SWI_TYPE "peridot_swi"
 
 

@@ -6,7 +6,7 @@
  */
 
 #include "duktape.h"
-#include "dux_all.h"
+#include "dux.h"
 #include <unistd.h>
 #include <fcntl.h>
 
